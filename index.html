@@ -122,4 +122,148 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construcción Medinacosta</title>
+  <style>
+    :root {
+      --azul-francia: #0072bb;
+      --negro: #111;
+      --blanco: #fff;
+      --gris-claro: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--blanco);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--azul-francia);
+      color: var(--blanco);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--negro);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--azul-francia);
+      border-bottom: 2px solid var(--azul-francia);
+      padding-bottom: 0.5rem;
+    }
+
+    .servicio {
+      background-color: var(--gris-claro);
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: 5px solid var(--azul-francia);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--azul-francia);
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .contacto a {
+      color: var(--azul-francia);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Construcción Medinacosta</h1>
+    <p>Soluciones integrales en reformas, obra nueva y servicios técnicos</p>
+  </header>
+
+  <nav>
+    <a href="#reformas">Reformas</a>
+    <a href="#obra-nueva">Obra Nueva</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="reformas">
+    <h2>Obras en Reforma</h2>
+    <div class="servicio">Rehabilitación de pisos y edificios residenciales</div>
+    <div class="servicio">Redistribución de espacios y mejora de eficiencia energética</div>
+    <div class="servicio">Reformas integrales de cocinas, baños y salones</div>
+  </section>
+
+  <section id="obra-nueva">
+    <h2>Obra Nueva</h2>
+    <div class="servicio">Construcción de viviendas unifamiliares</div>
+    <div class="servicio">Edificios residenciales y comerciales</div>
+    <div class="servicio">Dirección técnica y ejecución llave en mano</div>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios Técnicos</h2>
+    <div class="servicio">Electricidad: instalaciones, cableado y automatización</div>
+    <div class="servicio">Pintura: interior, exterior y acabados decorativos</div>
+    <div class="servicio">Carpintería: puertas, armarios, suelos y mobiliario a medida</div>
+  </section>
+
+  <section id="galeria" class="galeria">
+    <h2>Galería de Proyectos</h2>
+    <img src="img/reforma1.jpg" alt="Reforma de cocina">
+    <img src="img/obra-nueva1.jpg" alt="Edificio residencial">
+    <img src="img/electricidad.jpg" alt="Instalación eléctrica">
+    <img src="img/pintura.jpg" alt="Pintura decorativa">
+    <img src="img/carpinteria.jpg" alt="Carpintería personalizada">
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres que trabajemos juntos? Escríbenos a <a href="mailto:info@medinacosta.com">info@medinacosta.com</a> o <a href="https://wa.me/34123456789" target="_blank">contáctanos por WhatsApp</a>.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Construcción Medinacosta. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
+
 
