@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Construcción Medinacosta</title>
+  <meta name="description" content="Empresa especializada en reformas, obra nueva y servicios técnicos en España.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
     :root {
       --azul-francia: #0072bb;
@@ -42,12 +45,24 @@
       font-size: 1.2rem;
     }
 
+    .btn-contacto {
+      background-color: var(--azul-francia);
+      color: var(--blanco);
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 2rem;
+    }
+
     nav {
       background-color: var(--negro);
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -86,15 +101,17 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
+      text-align: center;
     }
 
     .card:hover {
       transform: translateY(-5px);
     }
 
-    .card h3 {
-      margin-bottom: 1rem;
+    .card i {
+      font-size: 2rem;
       color: var(--azul-francia);
+      margin-bottom: 1rem;
     }
 
     .galeria {
@@ -134,13 +151,11 @@
 </head>
 <body>
 
-  header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-}
-
+  <header>
+    <h1>Construcción Medinacosta</h1>
+    <p>Excelencia en reformas, obra nueva y servicios técnicos</p>
+    <a href="#contacto" class="btn-contacto">Solicita presupuesto</a>
+  </header>
 
   <nav>
     <a href="#servicios">Servicios</a>
@@ -151,25 +166,30 @@
   <section id="servicios">
     <h2>Servicios</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" data-aos="fade-up">
+        <i class="fas fa-hammer"></i>
         <h3>Reformas</h3>
-        <p>Transformamos pisos y edificios con soluciones modernas y funcionales.</p>
+        <p>Transformamos pisos y edificios con soluciones modernas y eficaces.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
+        <i class="fas fa-building"></i>
         <h3>Obra Nueva</h3>
-        <p>Construcción de viviendas y estructuras desde cero, con dirección técnica completa.</p>
+        <p>Construcción de viviendas desde cero, con dirección técnica completa.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
+        <i class="fas fa-bolt"></i>
         <h3>Electricidad</h3>
         <p>Instalaciones seguras, eficientes y adaptadas a cada proyecto.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
+        <i class="fas fa-paint-roller"></i>
         <h3>Pintura</h3>
-        <p>Acabados decorativos, exteriores e interiores con estilo profesional.</p>
+        <p>Acabados decorativos, exteriores e interiores con precisión.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
+        <i class="fas fa-chair"></i>
         <h3>Carpintería</h3>
-        <p>Diseño y montaje de mobiliario, puertas y suelos a medida.</p>
+        <p>Diseño y montaje de mobiliario, puertas y estructuras de madera.</p>
       </div>
     </div>
   </section>
@@ -194,6 +214,8 @@
     <p>&copy; 2025 Construcción Medinacosta. Todos los derechos reservados.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
 
