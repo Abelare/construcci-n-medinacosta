@@ -90,8 +90,9 @@
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
     }
 
@@ -102,6 +103,8 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       text-align: center;
+      flex: 1 1 250px;
+      max-width: 300px;
     }
 
     .card:hover {
@@ -184,9 +187,9 @@
       <div class="card" data-aos="fade-up">
         <i class="fas fa-paint-roller"></i>
         <h3>Pintura</h3>
-        <p>Acabados decorativos, exteriores e interiores con precisión.</p>
+        <p>Acabados decorativos, interiores y exteriores con precisión.</p>
       </div>
-      <div class="card" data-aos="fade-up">
+      <div class="card center-card" data-aos="fade-up">
         <i class="fas fa-chair"></i>
         <h3>Carpintería</h3>
         <p>Diseño y montaje de mobiliario, puertas y estructuras de madera.</p>
@@ -218,5 +221,6 @@
   <script>AOS.init();</script>
 </body>
 </html>
+
 
 
