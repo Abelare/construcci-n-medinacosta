@@ -4,26 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Construcción Medinacosta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --azul-francia: #0072bb;
       --negro: #111;
       --blanco: #fff;
-      --gris-claro: #f4f4f4;
+      --gris: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background-color: var(--blanco);
       color: var(--negro);
+      line-height: 1.6;
     }
 
     header {
-      background-color: var(--azul-francia);
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover no-repeat;
       color: var(--blanco);
-      padding: 2rem;
       text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
     }
 
     nav {
@@ -38,44 +54,75 @@
       color: var(--blanco);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul-francia);
     }
 
     section {
-      padding: 2rem;
-      max-width: 1000px;
+      padding: 4rem 2rem;
+      max-width: 1200px;
       margin: auto;
     }
 
     h2 {
+      text-align: center;
       color: var(--azul-francia);
-      border-bottom: 2px solid var(--azul-francia);
-      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
     }
 
-    .servicio {
-      background-color: var(--gris-claro);
-      margin: 1rem 0;
-      padding: 1rem;
-      border-left: 5px solid var(--azul-francia);
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--gris);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      color: var(--azul-francia);
     }
 
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1rem;
     }
 
     .galeria img {
       width: 100%;
-      height: auto;
-      border: 2px solid var(--azul-francia);
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       background-color: var(--negro);
       color: var(--blanco);
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
+    }
+
+    .contacto {
+      text-align: center;
+      font-size: 1.1rem;
     }
 
     .contacto a {
@@ -89,50 +136,55 @@
 
   <header>
     <h1>Construcción Medinacosta</h1>
-    <p>Soluciones integrales en reformas, obra nueva y servicios técnicos</p>
+    <p>Excelencia en reformas, obra nueva y servicios técnicos</p>
   </header>
 
   <nav>
-    <a href="#reformas">Reformas</a>
-    <a href="#obra-nueva">Obra Nueva</a>
     <a href="#servicios">Servicios</a>
     <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <section id="reformas">
-    <h2>Obras en Reforma</h2>
-    <div class="servicio">Rehabilitación de pisos y edificios residenciales</div>
-    <div class="servicio">Redistribución de espacios y mejora de eficiencia energética</div>
-    <div class="servicio">Reformas integrales de cocinas, baños y salones</div>
-  </section>
-
-  <section id="obra-nueva">
-    <h2>Obra Nueva</h2>
-    <div class="servicio">Construcción de viviendas unifamiliares</div>
-    <div class="servicio">Edificios residenciales y comerciales</div>
-    <div class="servicio">Dirección técnica y ejecución llave en mano</div>
-  </section>
-
   <section id="servicios">
-    <h2>Servicios Técnicos</h2>
-    <div class="servicio">Electricidad: instalaciones, cableado y automatización</div>
-    <div class="servicio">Pintura: interior, exterior y acabados decorativos</div>
-    <div class="servicio">Carpintería: puertas, armarios, suelos y mobiliario a medida</div>
+    <h2>Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Reformas</h3>
+        <p>Transformamos pisos y edificios con soluciones modernas y funcionales.</p>
+      </div>
+      <div class="card">
+        <h3>Obra Nueva</h3>
+        <p>Construcción de viviendas y estructuras desde cero, con dirección técnica completa.</p>
+      </div>
+      <div class="card">
+        <h3>Electricidad</h3>
+        <p>Instalaciones seguras, eficientes y adaptadas a cada proyecto.</p>
+      </div>
+      <div class="card">
+        <h3>Pintura</h3>
+        <p>Acabados decorativos, exteriores e interiores con estilo profesional.</p>
+      </div>
+      <div class="card">
+        <h3>Carpintería</h3>
+        <p>Diseño y montaje de mobiliario, puertas y suelos a medida.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="galeria" class="galeria">
-    <h2>Galería de Proyectos</h2>
-    <img src="img/reforma1.jpg" alt="Reforma de cocina">
-    <img src="img/obra-nueva1.jpg" alt="Edificio residencial">
-    <img src="img/electricidad.jpg" alt="Instalación eléctrica">
-    <img src="img/pintura.jpg" alt="Pintura decorativa">
-    <img src="img/carpinteria.jpg" alt="Carpintería personalizada">
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/reforma1.jpg" alt="Reforma de cocina">
+      <img src="img/obra-nueva1.jpg" alt="Edificio residencial">
+      <img src="img/electricidad.jpg" alt="Instalación eléctrica">
+      <img src="img/pintura.jpg" alt="Pintura decorativa">
+      <img src="img/carpinteria.jpg" alt="Carpintería personalizada">
+    </div>
   </section>
 
   <section id="contacto" class="contacto">
     <h2>Contacto</h2>
-    <p>¿Quieres que trabajemos juntos? Escríbenos a <a href="mailto:info@medinacosta.com">info@medinacosta.com</a> o <a href="https://wa.me/34123456789" target="_blank">contáctanos por WhatsApp</a>.</p>
+    <p>¿Quieres que trabajemos juntos? Escríbenos a <a href="mailto:info@medinacosta.com">info@medinacosta.com</a> o <a href="https://wa.me/34123456789" target="_blank">WhatsApp directo</a>.</p>
   </section>
 
   <footer>
@@ -141,6 +193,4 @@
 
 </body>
 </html>
-
-
 
